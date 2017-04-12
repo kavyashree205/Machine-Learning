@@ -1,0 +1,87 @@
+Exploratory Data Analysis
+==========================
+1. Create the following plots: histogram, and barplot.
+Write a short note on the distribution of the variables that you observe from the plots. Are they normally distributed?
+
+(Histogram and barplots are in the folders HISTOGRAM and BARPLOT respectively)
+
+Distribution of variables-
+============================
+Variable AGE - the distribution represents a skewed right kind of graph where we can see that the frequency of people with age between 20-25 is highest 
+for this dataset 
+Variable INS - the distribution represents a skewed right kind of graph where we can see that the frequency of people with INS value between 0-100 
+is highest for this dataset 
+Variable TSF - the distribution is non-symmetric
+Variable NPG - the distribution represents a skewed right kind of graph where we can see that the frequency of people with NPG value between 0-2 
+is highest for this dataset
+The variables BMI, DIA, DPF and PGL are found to be normally distributed 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Find the correlation between each of the attributes and the class variable. 
+Note: You will need to convert the factor variable to numeric to perform this calculation.
+You can use R’s cor function to compute correlations.
+Which attributes seem to have a strong correlation with the output(class) variable?
+
+
+Variable NPG:
+--------------
+Correlation value-
+> print(corrNPG)
+[1] 0.2216924
+
+Variable PGL:
+--------------
+Correlation value-
+> print(corrPGL)
+[1] 0.4864546
+
+Variable TSF:
+--------------
+Correlation value-
+> print(corrTSF)
+[1] 0.09727419
+
+Variable INS:
+--------------
+Correlation value-
+> print(corrINS)
+[1] 0.1267443
+
+Variable BMI:
+--------------
+Correlation value-
+> print(corrBMI)
+[1] 0.3122159
+
+Variable DPF:
+--------------
+Correlation value-
+> print(corrDPF)
+[1] 0.1795119
+
+Variable AGE:
+--------------
+Correlation value-
+> print(corrAGE)
+[1] 0.2401372
+
+From the above values, we can see that PGL has a strong correlation with the output class variable
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Compute the correlation between all pairs of the 8 attributes. Which two attributes have the highest mutual correlation?
+
+(after executing the for loop, printing the the two attributes with highest mutual correlation gives the following)
+
+> print(attr1)
+NPG 
+  6 
+> print(attr2)
+AGE 
+ 50 
+> print(value)
+[1] 0.5443412
+
+The two attributes NPG and AGE have the highest mutual correlation of 0.5443412
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
