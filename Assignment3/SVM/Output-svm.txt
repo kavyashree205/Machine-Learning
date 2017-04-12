@@ -1,0 +1,20 @@
+SVM CLASSIFIER
+===============
+
+R Package used that does SVM classification - e1071
+ 
+
+OUTPUT :
+==========
+
+OVERALL ACCURACY of SVM classifier using Default kernel = 76.35% 
+
+Kernel			Average accuracy of 10 experiments
+---------------------------------------------------
+Linear							77.20%
+Polynomial						74.40%
+Radial 							76.35%
+Sigmoid							71.43%
+
+================================================================================================================================================================
+
