@@ -1,0 +1,28 @@
+III. Classification :
+========================
+NOTE: Files part3BaggingTraining.model and part3BaggingPrediction.model representing bagging model have been included
+
+Training accuracy for four Ensemble algorithms :
+
+---------------------------------------------------------------------------------------------------------------------------------------
+Algorithm		|		Parameters						                                                          |	%Training Accuracy
+---------------------------------------------------------------------------------------------------------------------------------------
+Random Forest		RandomForest -I 10 -K 0 -S 1 -num-slots 1			                                             100%
+J48					J48 -C 0.25 -M 2																				 100%
+Boosting			AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump		                     100%
+Bagging				Bagging -P 100 -S 1 -I 10 -W weka.classifiers.trees.REPTree -- -M 2 -V 0.001 -N 3 -S 1 -L -1	 100%
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+Test accuracy for four Ensemble algorithms :
+
+---------------------------------------------------------------------------------------------------------------------------------------
+Algorithm		|		Parameters						                                                          |	%Testing Accuracy
+---------------------------------------------------------------------------------------------------------------------------------------
+Random Forest		RandomForest -I 10 -K 0 -S 1 -num-slots 1			                                             34.2105 %
+J48					J48 -C 0.25 -M 2																				 55.2631 %
+Boosting			AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump		                     60.5263 %
+Bagging				Bagging -P 100 -S 1 -I 10 -W weka.classifiers.trees.REPTree -- -M 2 -V 0.001 -N 3 -S 1 -L -1	 55.2631 %
+
+---------------------------------------------------------------------------------------------------------------------------------------

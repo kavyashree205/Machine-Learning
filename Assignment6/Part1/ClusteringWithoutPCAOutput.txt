@@ -1,0 +1,129 @@
+I . Clustering without PCA :
+===============================
+The file Part1Hierarchicalk2.arff file has been included
+
+k-means Clustering :
+=====================
+k=2
+Parameters: -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 55
+seed = 55
+Number of iterations: 7
+Within cluster sum of squared errors SSE: 11667.247034767599
+
+
+Clustered Instances
+
+0      22 ( 58%)
+1      16 ( 42%)
+
+
+Class attribute: Gene Accession Number
+Classes to Clusters:
+
+  0  1  <-- assigned to cluster
+  6  2 | ALL-T
+ 12  7 | ALL-B
+  4  7 | AML
+
+Cluster 0 <-- ALL-B
+Cluster 1 <-- AML
+
+Confusion Matrix:
+-----------------
+Incorrectly clustered instances :	19.0	 50      %
+Correctly clustered instances : 19.0	50%
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+k=3
+Parameters: -N 3 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 45
+seed =45
+Number of iterations: 3
+Within cluster sum of squared errors: 11024.211055567917
+
+
+Clustered Instances
+
+0      12 ( 32%)
+1       5 ( 13%)
+2      21 ( 55%)
+
+
+Class attribute: Gene Accession Number
+Classes to Clusters:
+
+  0  1  2  <-- assigned to cluster
+  4  0  4 | ALL-T
+  6  0 13 | ALL-B
+  2  5  4 | AML
+
+Cluster 0 <-- ALL-T
+Cluster 1 <-- AML
+Cluster 2 <-- ALL-B
+
+Confusion Matrix:
+------------------
+Incorrectly clustered instances :	16.0	 42.1053 %
+Correctly clustered instances : 22.0	57.8947%
+
+=================================================================================================================================================================
+
+Hierarchical Clustering :
+===========================
+
+k=2
+Parameters: -N 2 -L SINGLE -P -A "weka.core.EuclideanDistance -R first-last"
+
+
+Clustered Instances
+
+0      37 ( 97%)
+1       1 (  3%)
+
+
+Class attribute: Gene Accession Number
+Classes to Clusters:
+
+  0  1  <-- assigned to cluster
+  8  0 | ALL-T
+ 18  1 | ALL-B
+ 11  0 | AML
+
+Cluster 0 <-- ALL-B
+Cluster 1 <-- No class
+
+Confusion Matrix:
+------------------
+Incorrectly clustered instances :	20.0	 52.6316 %
+Correctly clustered instances : 18.0	47.3684%
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+k=3
+Parameters: -N 3 -L SINGLE -P -A "weka.core.EuclideanDistance -R first-last"
+
+Clustered Instances
+
+0      36 ( 95%)
+1       1 (  3%)
+2       1 (  3%)
+
+
+Class attribute: Gene Accession Number
+Classes to Clusters:
+
+  0  1  2  <-- assigned to cluster
+  8  0  0 | ALL-T
+ 17  1  1 | ALL-B
+ 11  0  0 | AML
+
+Cluster 0 <-- ALL-B
+Cluster 1 <-- No class
+Cluster 2 <-- No class
+
+Confusion Matrix:
+------------------
+Incorrectly clustered instances :	21.0	 55.2632 %
+Correctly clustered instances : 17.0	44.7368%
+
+================================================================================================================================================================
